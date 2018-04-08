@@ -1,5 +1,4 @@
-(ns euler-clojure.core (:gen-class)
-  (:require [euler-clojure.problem67 :as p]))
+(ns euler-clojure.core (:gen-class))
 
 (defn foo
   "I don't do a whole lot."
@@ -7,4 +6,4 @@
   (println x "Hello, World!"))
 
 (defn -main [& args]
-  (p/solve 100 p/nums))
+  (foo 1))
