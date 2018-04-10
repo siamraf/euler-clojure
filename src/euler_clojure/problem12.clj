@@ -8,7 +8,7 @@
       true
       (if (or (= 0 (mod n 2)) (= 0 (mod n 3)))
         false
-        (if (keep #(or (= 0 (mod n %)) (= 0 (mod n (+ % 2)))) (range 5 (inc (int (Math/sqrt n))) 6)) true false)))))
+        (nil? (seq (filter #(or (= 0 (mod n %)) (= 0 (mod n (+ % 2)))) (range 5 (inc (int (Math/sqrt n))) 6))))))))
 
 (defn prime-factors
   [n]
