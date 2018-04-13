@@ -6,4 +6,5 @@
   :dependencies [[org.clojure/clojure "1.8.0"]
                  [ubergraph "0.4.0"]
                  [org.clojure/math.combinatorics "0.1.4"]]
+  :jvm-opts ["-Xss4m"]
   :main euler-clojure.core)
