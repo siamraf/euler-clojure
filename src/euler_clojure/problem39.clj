@@ -18,5 +18,4 @@
 
 (defn solve
   [n]
-  (map #(vector % (count (get-sols %))) (range 3 (inc n)))
-  )
+  (apply max-key second (map #(vector % (count (get-sols %))) (range 3 (inc n)))))
