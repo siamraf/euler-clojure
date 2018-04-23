@@ -19,7 +19,7 @@
          pv (pent pn)
          hv (hex hn)]
      (cond
-       (= tv pv hv) (cons tv (apply solve (map inc [tn pn hn])))
+       (= tv pv hv) (lazy-seq (cons tv (apply solve (map inc [tn pn hn]))))
        (and (<= tv pv) (<= tv hv)) (recur (inc tn) pn hn)
        (and (<= pv tv) (<= pv hv)) (recur tn (inc pn) hn)
        :else (recur tn pn (inc hn))))))
